@@ -14,9 +14,9 @@ const Navbar = () => {
   return (
     <nav>
         <div onClick={()=> setMenuOpen(!menuOpen)} className='w-6 h-6 md:hidden hover:cursor-pointer'>
-           {menuOpen? <XIcon/> :<MenuIcon/>}
+           {menuOpen? <XIcon/> : <MenuIcon/>}
         </div>
-         <ul className='md:flex justify-center'>
+         <ul className= {`md:flex justify-center absolute duration-500 ease-in ${menuOpen ? 'top-6' : 'top-[-120px]' }`}>
              {routes.map(route => <Link key={route.id} route = {route}/>)}
          </ul>
     </nav>
