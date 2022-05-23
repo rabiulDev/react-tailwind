@@ -1,9 +1,11 @@
 import './App.css';
+import Header from './Components/Header/Header';
 
 function App() {
   return (
     <div className="App">
-     <h1>Hellow React Tailwind</h1>
+      <Header/>
+     <h1 className='text-6xl'>Welcome to my pricing club</h1>
     </div>
   );
 }
